@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plain HTML Image Cropper with File Input</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <style>
+        #cropped-preview {
+            display: none;
+            max-width: 200px;
+            max-height: 200px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        #original-image {
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Cropper Example with File Input</h1>
+
+    <div>
+        <h2>Select Image to Crop:</h2>
+        <input type="file" id="image-upload-input" accept="image/*">
+    </div>
+
+    <div>
+        <h2>Original Image:</h2>
+        <img id="original-image" src="" alt="Image to Crop" style="display: none;"> <br> <div id="no-image-text">No image selected yet.</div>
+        <br>
+        <button id="start-crop-button" disabled>Crop Image</button>
+    </div>
+
+    <div>
+        <h2>Cropped Preview:</h2>
+        <img id="cropped-preview" src="" alt="Cropped Image Preview">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="cropper-script.js"></script>
+</body>
+</html>
